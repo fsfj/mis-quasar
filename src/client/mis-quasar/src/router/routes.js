@@ -2,20 +2,20 @@
 const routes = [
   {
     path: '/',
-    name: 'Home',
     icon: 'home',
+    text: 'Home',
     component: () => import('layouts/MyLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: '', name: 'Home', component: () => import('pages/Index.vue') }
     ]
   },
   {
     path: '/members',
-    name: 'Members',
     icon: 'people',
+    text: 'Members',
     component: () => import('layouts/MyLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/members/List.vue') },
+      { path: '', name: 'Members', component: () => import('pages/members/List.vue') },
       { path: 'create', component: () => import('pages/members/Create.vue') }
     ]
   },

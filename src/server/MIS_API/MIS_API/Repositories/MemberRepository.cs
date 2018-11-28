@@ -48,7 +48,8 @@ namespace MIS_API.Repositories
         {
             using (var conn = _connectionFactory.Connection)
             {
-                await conn.ExecuteAsync("Members_Insert", member, commandType: CommandType.StoredProcedure);
+                var memberDto = _mapper.Map<CreateMemberDto>(member);
+                await conn.ExecuteAsync("Members_Insert", memberDto, commandType: CommandType.StoredProcedure);
             }
         }
 

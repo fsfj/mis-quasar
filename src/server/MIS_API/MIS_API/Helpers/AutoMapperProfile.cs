@@ -13,6 +13,7 @@ namespace MIS_API.Helpers
         public AutoMapperProfile()
         {
             CreateMap<GetMemberDto, Members>();
+            CreateMap<CreateMemberDto, Members>();
         }
     }
 }

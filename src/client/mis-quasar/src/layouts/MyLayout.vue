@@ -36,7 +36,7 @@
         <q-item v-for="(route, index) in routes" v-bind:key="index" :to="{ path: route.path }" v-if="route.path !== '*'" exact>
           <q-item-side :icon="route.icon" />
           <q-item-main>
-            <q-item-tile label>{{route.name}}</q-item-tile>
+            <q-item-tile label>{{route.text}}</q-item-tile>
             <q-item-tile sublabel></q-item-tile>
           </q-item-main>
         </q-item>
